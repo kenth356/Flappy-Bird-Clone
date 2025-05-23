@@ -270,7 +270,7 @@ int main() {
 				birdload.updateBIRD();
 				if (timeLASTSPAWN >= IG_spawn_intv) {
 					float maxTOP = 600 - IG_pipe_gap - 50;
-					float heightTOP = static_cast<float>(rand() % static_cast<int>(maxTOP - 50) + 50);
+					float heightTOP = static_cast<float>(rand() % static_cast<int>(maxTOP - 80) + 80);
 					pipes.emplace_back(800, heightTOP, pipeTEXT_TOP, pipeTEXT_BOT);
 					timeLASTSPAWN = 0.f;
 				}
