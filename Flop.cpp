@@ -171,6 +171,8 @@ int main() {
 					if (!gameOVER && ev.key.code == Keyboard::Escape)
 						gamevars = GV_pause;
 					if (gameOVER && ev.key.code == Keyboard::R) {
+						gameoverSOUNDS.stop();
+						backgroundAUDIO.play();
 						birdload.bird_SPRT.setPosition(100, 600 / 2);
 						birdload.velocity = 0.f;
 						pipes.clear();
@@ -182,6 +184,8 @@ int main() {
 						pipeSPEED = IG_pipe_speed;
 						clock.restart();
 					} if (gameOVER && ev.key.code == Keyboard::M) {
+						gameoverSOUNDS.stop();
+						backgroundAUDIO.play();
 						gamevars = GV_menu;
 						birdload.bird_SPRT.setPosition(100, 600 / 2);
 						birdload.velocity = 0.f;
@@ -200,6 +204,7 @@ int main() {
 						gamevars = GV_game;
 						clock.restart();
 					} if (ev.key.code == Keyboard::M) {
+						backgroundAUDIO.play();
 						gamevars = GV_menu;
 						birdload.bird_SPRT.setPosition(100, 600 / 2);
 						birdload.velocity = 0.f;
@@ -212,6 +217,7 @@ int main() {
 						pipeSPEED = IG_pipe_speed;
 						clock.restart();
 					} if (ev.key.code == Keyboard::R) {
+						backgroundAUDIO.play();
 						gamevars = GV_game;
 						birdload.bird_SPRT.setPosition(100, 600 / 2);
 						birdload.velocity = 0.f;
@@ -227,6 +233,7 @@ int main() {
 				}
 				else if (gamevars == GV_finish) {
 					if (ev.key.code == Keyboard::M) {
+						backgroundAUDIO.play();
 						gamevars = GV_menu;
 						birdload.bird_SPRT.setPosition(100, 600 / 2);
 						birdload.velocity = 0.f;
@@ -239,6 +246,7 @@ int main() {
 						pipeSPEED = IG_pipe_speed;
 						clock.restart();
 					} if (ev.key.code == Keyboard::R) {
+						backgroundAUDIO.play();
 						gamevars = GV_game;
 						birdload.bird_SPRT.setPosition(100, 600 / 2);
 						birdload.velocity = 0.f;
